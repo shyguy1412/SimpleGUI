@@ -96,6 +96,7 @@ public abstract class SComponent {
 			}
 			this.g.resetMatrix(); // undo any potential matrix manipulation
 			canvas.push();
+			canvas.resetMatrix();
 			canvas.translate(this.pos.x, this.pos.y);
 			canvas.rotate(this.rotation);
 			canvas.image(this.g, 0, 0);
