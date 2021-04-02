@@ -118,9 +118,9 @@ public abstract class SComponent {
 	public PVector globalToLocal(float x, float y) {
 		if (this.container == null) {
 			PVector local = new PVector(x, y);
-			PMatrix mat = app.getMatrix();
-			mat.invert();
-			local = mat.mult(local, null);
+//			PMatrix mat = app.getMatrix();
+//			mat.invert();
+//			local = mat.mult(local, null);
 			return local;
 		} else {
 			return container.globalToLocal(x, y).sub(this.container.pos);
