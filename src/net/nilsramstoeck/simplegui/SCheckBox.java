@@ -96,7 +96,7 @@ public class SCheckBox extends SToggleButton {
 		this.hoverMarkerColor = app.color(0);
 		this.borderColor = app.color(0);
 		this.hoverBorderColor = app.color(0);
-		this.borderWidth = 2;
+		this.borderWidth = 1;
 		this.fadeTime = 0.1f;
 		this.showBorder = true;
 		this.mutatedFlag = true;

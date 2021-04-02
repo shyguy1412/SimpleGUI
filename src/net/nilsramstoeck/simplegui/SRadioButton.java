@@ -18,6 +18,7 @@ public class SRadioButton extends SToggleButton {
 	 * Class identifier for the radiobutton.
 	 */
 	private String radioclass;
+	private String name;
 	private float radius;
 
 	private int backgroundColor;
@@ -38,10 +39,11 @@ public class SRadioButton extends SToggleButton {
 	 * @param r          RadioButton radius
 	 * @param radioclass RadioButton class
 	 */
-	public SRadioButton(PApplet app, float x, float y, float r, String radioclass) {
+	public SRadioButton(PApplet app, float x, float y, float r, String name, String radioclass) {
 		super(app, x, y);
 		this.radius = r;
 		this.radioclass = radioclass;
+		this.name = name;
 		SRadioButtonMaster.addRadioButton(this);
 		this.setDefaultStyling();
 	}
@@ -54,7 +56,7 @@ public class SRadioButton extends SToggleButton {
 	@Override
 	protected boolean collision(int x, int y) {
 		if (this.g == null) return false;
-		return PApplet.dist(this.pos.x + this.g.width/2, this.pos.y + this.g.height/2, x, y) < PApplet.max(this.g.width/2, this.g.height/2);
+		return PApplet.dist(this.pos.x + this.g.width / 2, this.pos.y + this.g.height / 2, x, y) < PApplet.max(this.g.width / 2, this.g.height / 2);
 	}
 
 	@Override
@@ -91,6 +93,10 @@ public class SRadioButton extends SToggleButton {
 		return graphics;
 	}
 
+	public static SRadioButton getActive(String radioclass) {
+		return SRadioButtonMaster.getActiveRadioButtonFromClass(radioclass);
+	}
+
 	/**
 	 * Manages the RadioButtons so they behave correctly. e.g. Only one active
 	 * button per class.
@@ -117,6 +123,13 @@ public class SRadioButton extends SToggleButton {
 				btn.setState(false);
 			}
 			radiobutton.state = true;
+		}
+
+		private static SRadioButton getActiveRadioButtonFromClass(String radioClass) {
+			for (SRadioButton btn : SRadioButtonMaster.radioClassCollection.get(radioClass)) {
+				if (btn.getState()) return btn;
+			}
+			return null;
 		}
 	}
 
@@ -154,6 +167,22 @@ public class SRadioButton extends SToggleButton {
 	public void setRadius(float radius) {
 		this.mutatedFlag = true;
 		this.radius = radius;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getHoverBorderColor() {
+		return hoverBorderColor;
+	}
+
+	public void setHoverBorderColor(int hoverBorderColor) {
+		this.hoverBorderColor = hoverBorderColor;
 	}
 
 	public int getBackgroundColor() {
