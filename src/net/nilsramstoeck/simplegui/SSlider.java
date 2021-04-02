@@ -40,7 +40,6 @@ public class SSlider extends SAbstractSlider {
 
 	/**
 	 * 
-	 * /**
 	 * 
 	 * @param app    Reference to the PApplet instance
 	 * @param x      Component x Position in container space
@@ -271,6 +270,46 @@ public class SSlider extends SAbstractSlider {
 	public void setShowBorder(boolean showBorder) {
 		this.mutatedFlag = true;
 		this.showBorder = showBorder;
+	}
+
+	public float getStep() {
+		return step;
+	}
+
+	public void setStep(float step) {
+		this.step = step;
+	}
+
+	public float getMinValue() {
+		return minValue;
+	}
+
+	public void setMinValue(float minValue) {
+		this.minValue = minValue;
+	}
+
+	public float getMaxValue() {
+		return maxValue;
+	}
+
+	public void setMaxValue(float maxValue) {
+		this.maxValue = maxValue;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	public float getHandleWidth() {
+		return handleWidth;
+	}
+
+	public void setHandleWidth(float handleWidth) {
+		this.handleWidth = handleWidth;
 	}
 
 }

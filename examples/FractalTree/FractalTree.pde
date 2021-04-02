@@ -31,7 +31,6 @@ void branch(float len, float d){
   //point connecting the branches
   strokeWeight(d);
   point(0, 0);
-  strokeWeight(2);
 
   if (len > 4) {
     push();
