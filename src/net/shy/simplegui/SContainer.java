@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import java.util.HashSet;
 
@@ -13,7 +13,7 @@ import processing.core.PGraphics;
  * graphics should not be drawn on, as all changes will be lost if any child or
  * the container itself mutates. Containers can contain other containers.
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public abstract class SContainer extends SComponent {

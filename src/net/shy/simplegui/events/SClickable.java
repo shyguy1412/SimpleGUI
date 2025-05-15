@@ -1,8 +1,8 @@
-package net.nilsramstoeck.simplegui.events;
+package net.shy.simplegui.events;
 
 /**
  * Interface for Clickable Components
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public interface SClickable {

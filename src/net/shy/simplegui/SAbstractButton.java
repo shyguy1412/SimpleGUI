@@ -1,9 +1,9 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import java.util.HashSet;
 
-import net.nilsramstoeck.simplegui.events.SClickListener;
-import net.nilsramstoeck.simplegui.events.SClickable;
+import net.shy.simplegui.events.SClickListener;
+import net.shy.simplegui.events.SClickable;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;
@@ -13,7 +13,7 @@ import processing.event.MouseEvent;
  * Abstract class for all Buttons. Handles Mouse events, firing click events and
  * the fading on hover
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public abstract class SAbstractButton extends SComponent implements SClickable {
@@ -115,8 +115,8 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 	 * transformations as well as container offsets must be applied to the mouse
 	 * before checking collision
 	 * 
-	 * @param mouseX Mouse X with the same point of reference as Button X
-	 * @param mouseY Mouse Y with the same point of reference as Button Y
+	 * @param x Mouse X with the same point of reference as Button X
+	 * @param y Mouse Y with the same point of reference as Button Y
 	 * @return if the mouse is over the button
 	 */
 	protected abstract boolean collision(int x, int y);

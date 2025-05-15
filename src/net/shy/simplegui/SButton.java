@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import java.lang.reflect.Method;
 
@@ -8,7 +8,7 @@ import processing.core.PGraphics;
 /**
  * A Simple, Rectangular Button
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public class SButton extends SAbstractButton {

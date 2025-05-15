@@ -5,14 +5,14 @@
 # fit the structure of your Library
 
 # the package name of your Library
-package=template;
+package=net.shy.simplegui;
 
 # source folder location
-src=../src;
+src=src;
 
 # the destination folder of your documentation
-dest=../documentation;
+dest=documentation;
 
 
 # compile the java documentation
-javadoc -d $dest -stylesheetfile ./stylesheet.css -sourcepath ${src} ${package}
+javadoc -d $dest -stylesheetfile ./resources/stylesheet.css -sourcepath ${src} ${package} -cp ./lib/*.jar

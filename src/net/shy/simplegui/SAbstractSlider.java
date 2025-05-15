@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -8,7 +8,7 @@ import processing.event.MouseEvent;
 /**
  * Abstract for all Sliders including ScrollBars
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public abstract class SAbstractSlider extends SComponent {
@@ -194,8 +194,8 @@ public abstract class SAbstractSlider extends SComponent {
 	 * transformations as well as container offsets must be applied to the mouse
 	 * before checking collision
 	 * 
-	 * @param mouseX Mouse X with the same point of reference as Button X
-	 * @param mouseY Mouse Y with the same point of reference as Button Y
+	 * @param x Mouse X with the same point of reference as Button X
+	 * @param y Mouse Y with the same point of reference as Button Y
 	 * @return if the mouse is over the button
 	 */
 	protected abstract boolean sliderCollision(int x, int y);
@@ -205,8 +205,8 @@ public abstract class SAbstractSlider extends SComponent {
 	 * transformations as well as container offsets must be applied to the mouse
 	 * before checking collision
 	 * 
-	 * @param mouseX Mouse X with the same point of reference as Button X
-	 * @param mouseY Mouse Y with the same point of reference as Button Y
+	 * @param x Mouse X with the same point of reference as Button X
+	 * @param y Mouse Y with the same point of reference as Button Y
 	 * @return if the mouse is over the button
 	 */
 	protected abstract boolean bodyCollision(int x, int y);

@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -6,7 +6,7 @@ import processing.core.PGraphics;
 /**
  * A Simple CheckBox
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public class SCheckBox extends SToggleButton {

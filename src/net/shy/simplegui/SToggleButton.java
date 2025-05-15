@@ -1,10 +1,10 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import processing.core.PApplet;
 
 /**
  * Abstract for all toggleable buttons
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public abstract class SToggleButton extends SAbstractButton{

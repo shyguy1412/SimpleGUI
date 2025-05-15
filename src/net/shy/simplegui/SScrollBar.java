@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -7,7 +7,7 @@ import processing.core.PVector;
 /**
  * A Simple ScrollBar for ScrollPanels
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public class SScrollBar extends SAbstractSlider {

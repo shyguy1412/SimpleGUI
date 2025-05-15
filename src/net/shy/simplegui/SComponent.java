@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -9,7 +9,7 @@ import processing.core.PVector;
  * eligible for garbage collection, as registering the component to the PApplets
  * draw event means there will always be a reference to it
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public abstract class SComponent {

@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java (buildArtifact)",
+			"targetPath": "${workspaceFolder}/distribution/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput}",
+			],
+			"problemMatcher": [],
+			"label": "java build: SimpleGUI"
+		}
+	]
+}

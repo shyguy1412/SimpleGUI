@@ -1,8 +1,8 @@
-package net.nilsramstoeck.simplegui.events;
+package net.shy.simplegui.events;
 
 /**
  * Interface for Click Listeners
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public interface SClickListener {

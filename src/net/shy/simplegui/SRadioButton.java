@@ -1,4 +1,4 @@
-package net.nilsramstoeck.simplegui;
+package net.shy.simplegui;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import processing.core.PGraphics;
 /**
  * A Simple RadioButton
  * 
- * @author Nils Ramstoeck
+ * @author Shy
  *
  */
 public class SRadioButton extends SToggleButton {
@@ -101,7 +101,7 @@ public class SRadioButton extends SToggleButton {
 	 * Manages the RadioButtons so they behave correctly. e.g. Only one active
 	 * button per class.
 	 * 
-	 * @author Nils Ramstoeck
+	 * @author Shy
 	 *
 	 */
 	private static class SRadioButtonMaster {

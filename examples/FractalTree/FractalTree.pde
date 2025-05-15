@@ -1,5 +1,5 @@
-import net.nilsramstoeck.simplegui.*;
-import net.nilsramstoeck.simplegui.events.*;
+import net.shy.simplegui.*;
+import net.shy.simplegui.events.*;
 
 float angle; //stores angle of branches
 SSlider slider;
