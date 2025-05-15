@@ -61,10 +61,10 @@ public class SScrollPanel extends SContainer {
 		// SCROLL TRANSLATION
 		float translateX = 0, translateY = 0;
 		if (this.horizontalBar != null) {
-			translateX = PApplet.map((float)this.horizontalBar.getValue(), 0, 1, 0, (this.actualWidth - this.width));
+			translateX = PApplet.map((float) this.horizontalBar.getValue(), 0, 1, 0, (this.actualWidth - this.width));
 		}
 		if (this.verticalBar != null) {
-			translateY = PApplet.map((float)this.verticalBar.getValue(), 0, 1, 0, (this.actualHeight - this.height));
+			translateY = PApplet.map((float) this.verticalBar.getValue(), 0, 1, 0, (this.actualHeight - this.height));
 		}
 		return new PVector(-translateX, -translateY);
 	}
@@ -82,7 +82,6 @@ public class SScrollPanel extends SContainer {
 		if (this.verticalBar != null) {
 			this.mutatedFlag |= this.verticalBar.mutatedFlag;
 		}
-
 		super.render(g);
 	}
 
@@ -125,7 +124,7 @@ public class SScrollPanel extends SContainer {
 
 			scrollbarLength += 1.5;
 
-			float scrollbarHandleLength = (this.height / (this.height + (this.actualHeight - this.height)) * scrollbarLength);
+			float scrollbarHandleLength = this.height / (this.actualHeight * 1f) * scrollbarLength;
 
 			this.verticalBar.setScrollbarLength(scrollbarHandleLength);
 			this.verticalBar.setLength(scrollbarLength);
@@ -254,7 +253,6 @@ public class SScrollPanel extends SContainer {
 	public SScrollBar getHorizontalBar() {
 		return horizontalBar;
 	}
-	
 
 	public int getActualWidth() {
 		return actualWidth;
