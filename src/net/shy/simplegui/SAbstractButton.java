@@ -78,7 +78,6 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 	private void handleMouseClicked() {
 		if (this.hovered) {
 			this.dispatchClickEvent();
-			this.click();
 		}
 	}
 
@@ -136,6 +135,7 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 	}
 
 	public void dispatchClickEvent() {
+		this.click();
 		for (SClickListener listener : this.listeners) {
 			listener.onClick(this);
 		}
