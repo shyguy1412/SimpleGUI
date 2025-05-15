@@ -101,7 +101,8 @@ public class SScrollPanel extends SContainer {
 			graphics.noStroke();
 		}
 
-		graphics.rect(borderOffset, borderOffset, this.width - borderOffset * 2, this.height - borderOffset * 2, this.borderRadius);
+		graphics.rect(borderOffset, borderOffset, this.width - borderOffset * 2, this.height - borderOffset * 2,
+				this.borderRadius);
 
 		PVector scrollTranslation = this.getScrollTranslation();
 
@@ -116,7 +117,8 @@ public class SScrollPanel extends SContainer {
 		// Vertical Scrollbar
 
 		if (this.verticalBar != null) {
-			float scrollbarLength = graphics.height - this.scrollbarWidth - borderOffset * 4 + this.verticalBar.getBorderWidth() / 4;
+			float scrollbarLength = graphics.height - this.scrollbarWidth - borderOffset * 4
+					+ this.verticalBar.getBorderWidth() / 4;
 
 			if (this.horizontalBar != null) {
 				scrollbarLength -= this.horizontalBar.getBorderWidth() / 4;
@@ -141,7 +143,8 @@ public class SScrollPanel extends SContainer {
 		}
 
 		if (this.horizontalBar != null) {
-			float scrollbarLength = graphics.width - this.scrollbarWidth - borderOffset * 4 + this.horizontalBar.getBorderWidth() / 4;
+			float scrollbarLength = graphics.width - this.scrollbarWidth - borderOffset * 4
+					+ this.horizontalBar.getBorderWidth() / 4;
 
 			if (this.verticalBar != null) {
 				scrollbarLength -= this.verticalBar.getBorderWidth() / 4;
@@ -155,7 +158,7 @@ public class SScrollPanel extends SContainer {
 			scrollbarX -= 0.5f;
 			scrollbarY += 1.5f;
 
-			float scrollbarHandleLength = (this.width / (this.width + (this.actualWidth - this.width)) * scrollbarLength);
+			float scrollbarHandleLength = (this.width / (this.actualWidth * 1f) * scrollbarLength);
 
 			this.horizontalBar.setScrollbarLength(scrollbarHandleLength);
 			this.horizontalBar.setLength(scrollbarLength);
