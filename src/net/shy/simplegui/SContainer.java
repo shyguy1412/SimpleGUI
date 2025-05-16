@@ -47,14 +47,14 @@ public abstract class SContainer extends SComponent {
 	public void addComponent(SComponent comp) {
 		if (this.components.add(comp)) {
 			comp.container = this;
-			comp.app.unregisterMethod("draw", comp);
+			// comp.app.unregisterMethod("draw", comp);
 		}
 	}
 
 	public void removeComponent(SComponent comp) {
 		if (this.components.remove(comp)) {
 			comp.container = null;
-			comp.app.registerMethod("draw", comp);
+			// comp.app.registerMethod("draw", comp);
 		}
 		;
 	}

@@ -264,6 +264,13 @@ public class SScrollPanel extends SContainer {
 	public void setActualWidth(int actualWidth) {
 		this.mutatedFlag = true;
 		this.actualWidth = PApplet.max(this.width, actualWidth);
+		if (actualWidth > width && horizontalBar == null) {
+			horizontalBar = new SScrollBar(app, this, SScrollBar.HORIZONTAL);
+		} else if (actualWidth <= width) {
+			if (horizontalBar != null)
+				horizontalBar.disable();
+			horizontalBar = null;
+		}
 	}
 
 	public int getActualHeight() {
@@ -273,6 +280,14 @@ public class SScrollPanel extends SContainer {
 	public void setActualHeight(int actualHeight) {
 		this.mutatedFlag = true;
 		this.actualHeight = PApplet.max(this.height, actualHeight);
+
+		if (actualHeight > height && verticalBar == null) {
+			verticalBar = new SScrollBar(app, this, SScrollBar.VERTICAL);
+		} else if (actualHeight <= height) {
+			if (verticalBar != null)
+				verticalBar.disable();
+			verticalBar = null;
+		}
 	}
 
 	public int getScrollbarWidth() {

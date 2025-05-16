@@ -43,6 +43,10 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 		this.app.registerMethod("mouseEvent", this);
 	}
 
+	public void disable(){
+		this.app.unregisterMethod("mouseEvent", this);
+	}
+
 	/**
 	 * Processing mouse event. Handles collision, hover detection and click
 	 * detection;
@@ -50,7 +54,8 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 	 * @param e MouseEvent
 	 */
 	public void mouseEvent(MouseEvent e) {
-		if (!this.visible) return;
+		if (!this.visible)
+			return;
 
 		boolean phov = this.hovered;
 
@@ -65,9 +70,9 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 		}
 
 		switch (e.getAction()) {
-		case MouseEvent.CLICK:
-			this.handleMouseClicked();
-			break;
+			case MouseEvent.CLICK:
+				this.handleMouseClicked();
+				break;
 		}
 	}
 
@@ -101,7 +106,8 @@ public abstract class SAbstractButton extends SComponent implements SClickable {
 	 * @return fading progress
 	 */
 	protected float getFadeProgress() {
-		float progress = PApplet.constrain((System.currentTimeMillis() - this.fadeStart) / ((this.fadeTime + +PApplet.EPSILON) * 1000), 0, 1);
+		float progress = PApplet
+				.constrain((System.currentTimeMillis() - this.fadeStart) / ((this.fadeTime + +PApplet.EPSILON) * 1000), 0, 1);
 		if (this.hovered) {
 			return progress;
 		} else {

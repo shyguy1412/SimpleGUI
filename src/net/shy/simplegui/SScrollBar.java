@@ -40,7 +40,7 @@ public class SScrollBar extends SAbstractSlider {
 		super(app, 0, 0, 0);
 		this.orientation = orientation;
 		this.setDefaultStyling();
-		app.unregisterMethod("draw", this);
+		// app.unregisterMethod("draw", this);
 		this.container = parent;
 		this.parent = parent;
 	}

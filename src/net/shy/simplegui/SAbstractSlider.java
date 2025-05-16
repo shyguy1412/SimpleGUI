@@ -68,6 +68,11 @@ public abstract class SAbstractSlider extends SComponent {
 		app.registerMethod("mouseEvent", this);
 	}
 
+	public void disable(){
+		this.app.unregisterMethod("mouseEvent", this);
+	}
+
+
 	/**
 	 * Processing mouse event. Handles collision, hover detection and click
 	 * detection;

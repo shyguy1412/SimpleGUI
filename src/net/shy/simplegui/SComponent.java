@@ -63,7 +63,7 @@ public abstract class SComponent {
 		this.app = app;
 		this.pos = new PVector(x, y);
 
-		this.app.registerMethod("draw", this);
+		// this.app.registerMethod("draw", this);
 	}
 
 	/**
